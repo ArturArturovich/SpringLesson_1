@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id = "appointment" class = "Lesson1HW.Appointment"/>
+    <bean id = "vaccination" class="Lesson1HW.Vaccination"/>
+    <bean id = "vaccine" class = "Lesson1HW.HospitalImp">
+        <property name="vaccination">
+            <ref bean="appointment"/>
+        </property>
+    </bean>
+
+
+    <!--&lt;!&ndash;<bean id = "Vaccin" class = "Lesson1HW.HospitalImp">&ndash;&gt;-->
+        <!--<constructor-arg ref="vaccination"/>-->
+    <!--</bean>-->
+</beans>
